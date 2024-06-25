@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{css/mypage.css}">
+<link rel="stylesheet" type="text/css" th:href="@{css/UserLayout.css}">
+<body>
+	<header th:replace="~{UserLayout::header}"></header>
+	<nav th:replace="~{UserLayout::nav}"></nav>
+	<article>
+		<h3>마이페이지</h3>
+		<h5>000님 안녕하세요</h5>
+	</article>
+	<main>
+		<aside>
+			<ul>
+				<div class="list">
+					<li><a th:href="@{#}">나의 정보 조회</a></li>
+					<li><a th:href="@{#}" class="second">회원정보 수정</a></li>
+				</div>
+				<div class="list">
+					<li><a th:href="@{#}">나의 쇼핑 정보</a></li>
+					<li><a th:href="@{#}" class="second">주문배송 조회</a></li>
+					<li><a th:href="@{#}" class="second">장바구니</a></li>
+				</div>
+				<div class="list">
+					<li><a th:href="@{#}">고객센터</a></li>
+					<li><a th:href="@{#}" class="second">공지사항</a></li>
+				</div>
+			</ul>
+		</aside>
+		<div class="member">
+			<div class="containernotice">
+				<h4 id=text1>공지사항</h4>
+					<table border="1" id="notice">
+						<thead>
+							<th>글번호</th>
+							<th>제목</th>
+							<th>등록일</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>001</td> <!--notice_no:글번호  -->
+								<td>운영방침</td> <!-- notice_title:제목 -->
+								<td>2024.06.23</td> <!-- notice_date:등록일 -->
+							</tr>
+						</tbody>
+					</table>
+			</div>
+		</div>
+	</main>
+</body>
+</body>
+</html>
