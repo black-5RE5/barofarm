@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{css/UserMain.css}">
+<body>
+	<header th:replace="~{UserLayout::header}"></header>
+	<nav th:replace="~{UserLayout::nav}"></nav>
+	<main>
+		<div class="mainImg">
+			<img src="/img/밭1.jpg" alt="메인사진" class="mainImg">
+		</div>
+		<div class="m1">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+		<div class="m2">
+			<span>설명..</span>
+		</div>
+		<div class="m3">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div>
+	</main>
+</body>
+</html>
