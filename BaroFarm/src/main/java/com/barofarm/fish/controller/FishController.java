@@ -93,6 +93,15 @@ public class FishController {
 			
 			return "notice";
 		}
-	
-	
+	//레이아웃 개발중 - 담당자 son
+		@GetMapping("/userMain")
+		public String usermain() {
+			
+			return "UserMain";
+		}
+		@GetMapping("/userPro")
+		public String userpro() {
+			
+			return "UserProduct";
+		}
 }
