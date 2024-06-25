@@ -32,3 +32,4 @@ $(document).ready(function() {
 	$('#product_cate').change();
 
 });
+
