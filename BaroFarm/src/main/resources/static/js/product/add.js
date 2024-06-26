@@ -1,3 +1,4 @@
+/* .ready document가 완전히 로드 후 실행 */
 $(document).ready(function() {
 	$('#product_cate').change(function() {
 		var selected = $(this).val();
@@ -33,3 +34,10 @@ $(document).ready(function() {
 
 });
 
+//allview html 삭제 클릭시 확인 알림창 완료
+//confirm 함수의 자료형타입은 불린 확인을 누룰시 true 값 리턴
+//allview html 문서에서 a태그에 onclick 속성을 추가  
+//add.js 파일에 구현한 delchk() 함수 호출 하여 삭제 알림창 구현 
+function delchk(){
+	return confirm("정말로 삭제하시겠습니까?")
+}
