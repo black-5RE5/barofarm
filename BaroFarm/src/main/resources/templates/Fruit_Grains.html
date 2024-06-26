@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>상품 전체보기</title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{css/UserProduct.css}">
+<body>
+	<header th:replace="~{UserLayout::header}"></header>
+	<nav th:replace="~{UserLayout::nav}"></nav>
+	<main>
+		<div class="m1">
+			<div><span class="title">농산물</span></div>
+			<div class="m1_a">
+				<span><a href=#>과일 |</a></span>
+				<span><a href=#>채소 |</a></span>
+				<span><a href=#>쌀/잡곡</a></span>
+			</div>
+		</div>
+		<div class="m2" >
+			<div class="grid" th:each="fruit:${fruitGrain}">
+				<img alt="상품이미지" src="/img/.jpg" class="img">
+				<div class ="product_name" th:text="${fruit.product_name}" name="product_name">상품명</div>
+				<div class ="product_price" th:text="${fruit.product_price}">가격 : 00</div>
+				<div class ="product_origin" th:text="${fruit.product_origin}">원산지 : 00</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
