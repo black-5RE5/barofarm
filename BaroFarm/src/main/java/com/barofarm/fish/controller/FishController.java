@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.barofarm.fish.service.IF_FishService;
 import com.barofarm.fish.vo.FishVo;
+import com.barofarm.fish.vo.PageVO;
 
 @Controller
 public class FishController {
@@ -37,8 +38,18 @@ public class FishController {
 	}
 
 	@GetMapping("/allview")
-	public String allview(Model model) throws Exception{
-	List<FishVo> fVo = fService.allview();
+	public String allview(Model model, @ModelAttribute PageVO pagevo) throws Exception{
+	if(pagevo.getPage()==null) {
+		pagevo.setPage(1);
+	}
+	System.out.println("현재 페이지 번호: "+pagevo.getPage());
+	
+	pagevo.setTotalCount(fService.getTotalCount());
+	pagevo.prt();
+//	System.out.println("시작페이지 번호: "+pagevo.getStartNo());
+//	System.out.println("끝페이지 번호: "+pagevo.getEndNo());
+	List<FishVo> fVo = fService.allview(pagevo);
+	model.addAttribute("pagevo",pagevo);
 	model.addAttribute("allList",fVo);
 	return "allview";
 	}
