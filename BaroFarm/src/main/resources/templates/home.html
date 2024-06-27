@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" th:href="@{css/admin_home.css}">
 <title>Admin</title>
 </head>
 <body>
 
-<h1>바로팜 관리자 홈</h1><br> 
-	
-		<span th:text="${session.user_name}"></span>
-		<span><a href="logout">로그아웃</a></span><br>
-		
-		<a href="/home">홈 |</a>
-		<a href="/add">상품 등록 |</a>
-		<a href="/allview">상품 전체 보기 |</a>
-		<a href="/user_join">관리자 가입 |</a>	
-		<a href="login_main">로그인 |</a>	
-		<a href="/u_view">관리자 전체 보기</a>	
-		
+		<div id="wrapper">
+			<div class="box1">
+					<div class=logo>
+						
+					</div>
+					<span>바로팜 관리자 홈</span>
+					
+					<div class=admin>
+					<span class=admin_bar th:text="${session.user_name}"></span>
+					<span class=admin_bar><a href="logout">로그아웃</a></span><br>
+					</div>
+			</div>
+			<div class="box2">		
+				<ul class=nav>
+					<li class=menu_bar><a href="/home">홈</a></li>
+					<li class=menu_bar><a href="/add">상품 등록</a></li>
+					<li class=menu_bar><a href="/allview">상품 전체보기</a></li>
+					<li class=menu_bar><a href="/user_join">관리자 가입</a></li>	
+					<li class=menu_bar><a href="login_main">로그인</a></li>	
+					<li class=menu_bar><a href="/u_view">관리자 전체보기</a></li>
+				</ul>
+			</div>
+			
+			<div class="box3">
+				<div class=content>
+					<div class=content_1>
+					content1
+					</div>
+					<div class=content_2>
+					content2
+					</div>
+					<div class=content_3>
+					content3
+					</div>
+				</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</div>
+			
+		</div>
 </body>
 </html>
