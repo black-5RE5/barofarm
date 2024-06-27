@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 등록</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <!-- css --><!-- 레이아웃 적용 개발자:son -->
 <link rel="stylesheet" type="text/css" th:href="@{/css/AdminLayout.css}">
-<!-- JS -->
-<script th:src="@{/js/home.js}" defer></script>
+<!-- JS 
+<script th:src="@{/js/home.js}" defer></script> -->
 
 <body>
 	<header th:replace="~{AdminLayout::header}"></header>
@@ -34,7 +33,7 @@
 					<div><select name="product_cate" id="product_cate">
 					   	<option value="수산" >수산</option>
 					    <option value="축산" >축산</option>
-					    <option value="농산" >채소</option>
+					    <option value="농산" >농산</option>
 					</select></div>
 					 <div><select name="product_middle" id="product_middle">
 					   	<!--<option value="생선">생선</option>
@@ -59,6 +58,6 @@
 			</div>
 		</div>
 	</main>
-<script th:src="@{/js/product/add.js}" type="text/javascript" defer></script>
+<script th:src="@{/js/product/add.js}" type="text/javascript" defer></script> 
 </body>
 </html>

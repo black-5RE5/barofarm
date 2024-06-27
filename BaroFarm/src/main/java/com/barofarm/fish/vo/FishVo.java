@@ -2,8 +2,10 @@ package com.barofarm.fish.vo;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter @Setter
+@ToString
 public class FishVo {
 	
 	private String product_cate=null;

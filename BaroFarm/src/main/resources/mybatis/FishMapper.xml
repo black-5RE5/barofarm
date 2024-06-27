@@ -33,4 +33,26 @@
   update product set product_cate=#{product_cate},product_middle=#{product_middle},product_name=#{product_name},product_price=#{product_price},product_origin=#{product_origin},product_stock=#{product_stock}
   where product_no=#{product_no}
   </update>
+  
+  <select id="fruit" resultType="com.barofarm.fish.vo.FishVo">
+  	select * from product where product_cate='농산';
+  </select>
+  <select id="fruitFruit" resultType="com.barofarm.fish.vo.FishVo">
+  	select * from product where product_middle='과일';
+  </select>
+  <select id="fruitVege" resultType="com.barofarm.fish.vo.FishVo">
+  	select * from product where product_middle='채소';
+  </select>
+  <select id="fruitGrain" resultType="com.barofarm.fish.vo.FishVo">
+  	select * from product where product_middle='곡물';
+  </select>
+  
+  
+  <select id="meat" resultType="com.barofarm.fish.vo.FishVo">
+  	select * from product where product_cate='축산';
+  </select>
+  
+  <select id="fish" resultType="com.barofarm.fish.vo.FishVo">
+  	select * from product where product_cate='수산';
+  </select>
   </mapper>

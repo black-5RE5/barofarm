@@ -6,13 +6,12 @@
 </head>
 <!-- css --><!-- 레이아웃 적용 개발자:son -->
 <link rel="stylesheet" type="text/css" th:href="@{css/AdminLayout2.css}">
-
 <body>
 	<header th:replace="~{AdminLayout::header}"></header>
 	<nav th:replace="~{AdminLayout::nav}"></nav>
 	<main>
 		<div class="m1">
-			<font class="title"> 상품 등록 </font>
+			<font class="title"> 상품 전체보기 </font>
 		</div>
 		<hr class="hr" noshade>
 		<hr class="hr_1">
@@ -69,10 +68,11 @@
 			<div class="fish_table_cell2">		
 				<a th:href="@{'/modify/' + ${p.product_no}}">수정</a></div>
 			<div class="fish_table_cell2">
-				<a th:href="@{'/delete/' + ${p.product_no}}">삭제</a></div>
+				<a th:href="@{'/delete/' + ${p.product_no}}" onclick="return delchk()">삭제</a></div>
 			</div>
 		<hr class="hr_2" align="center">
 	</div>
 	</main>
+<script th:src="@{/js/product/add.js}" type="text/javascript" defer></script>
 </body>
 </html>

@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+
+/*레이아읏 개발중.. 개발자 :son*/
+*{
+	font-family: Pretendard SemiBold;
+}
+body{
+	margin: 0;
+	margin-top: 0;
+	background-color: rgb(245, 241, 206);
+}
+header {
+	color: rgb(44,74,58);
+	background-color: rgb(245, 241, 206);
+	/*border: 0.05rem solid black;*/
+}
+header .logo{
+	display: flex;
+	justify-content: center;
+}
+header .tree{
+	width: 10rem;
+	/*border: 0.05rem solid green;*/
+}
+header .home {
+	font-family: Pretendard ExtraBold;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.home span {
+	font-family: Pretendard ExtraBold;
+	font-size: 1.3rem;
+}
+header .info {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 0.5rem;
+	/*border: 0.05rem solid green;*/
+}
+.info a {
+	margin-left: 1rem;
+	text-decoration: none;
+	color: rgb(44,74,58);
+	/*border: 0.05rem solid green;*/
+}
+nav {
+	display: flex;
+	height: 2rem;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(44,74,58);
+	/*border: 0.05rem solid blue;*/
+}
+nav .home{
+	color: white;
+}
+nav a {
+	margin-left: 3rem;
+	text-decoration: none;
+	color: white;
+	/*border: 0.05rem solid blue;*/
+}
+nav .category{
+	margin-right: 3rem;
+	color: white;
+	display: flex;
+	gap: 0.5rem; /* 드롭다운 카테고리 간격 */ 
+}
+
+nav a:last-child, .info a:last-child {
+	margin-right: 1rem;
+}
+nav .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: rgb(44,74,58);
+    z-index: 1;
+}
+nav .dropdownContent a {
+    color: white;
+    padding: 12px 12px;
+    text-decoration: none;
+    display:flex;
+   	margin-left: 2rem;
+}
+nav .dropdown:hover .dropdownContent {
+    display: block;
+}
+main .m1{
+	padding-left: 3rem;
+	padding-top: 3rem;
+	
+}
+main .m1 a{
+	text-decoration: none;
+	color: rgb(44,74,58);
+}
+main .m1 .title{
+	color: rgb(44,74,58);
+	font-size: 1.5rem;
+}
+main .m1 .m1_a{
+	margin-top:2rem;
+}	
+main .m2{
+	margin-top:3rem;
+	margin-left:3rem;
+	margin-right:3rem;
+	display: grid;
+	grid-template-columns: repeat(3, 3fr);
+	grid-template-rows: 25rem;
+	grid-column-gap:3rem;
+	grid-row-gap:3rem;
+}
+main .m2 .grid{
+	border: 0.2rem solid red;
+}
+main .grid .img{
+	height:80%;
+	border: solid 2px rgb(44,74,58);
+}
+main .img .proImg{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+main .detail a{
+	margin-top: 1rem;
+	display:block;
+	text-decoration: none;
+	color: rgb(44,74,58);
+}
+main .detail .product_price{
+	margin-top: 0.5rem;
+	color: rgb(44,74,58);
+}
+/*
+main .m2 .img{
+	width: 20rem;
+	height: 20rem;
+	border: 0.2rem solid rgb(44,74,58);
+}
+main .m2 .productDetail{
+	border: 0.2rem solid rgb(44,74,58);
+	width: 39.5rem;
+	height:30rem;
+	border-left: none;
+	border-right: none;
+}
+main .m2 a{
+	display:block;
+	text-decoration: none;
+	color: black;
+	
+}*/
