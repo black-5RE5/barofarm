@@ -19,7 +19,6 @@ public class FishController {
 	@Autowired
 	IF_FishService fService;
 	
-
 	@GetMapping("/home")
 	public String home() {
 		return "home";
@@ -33,7 +32,7 @@ public class FishController {
 	@PostMapping("/addSave")
 	public String addSave(@ModelAttribute FishVo fVo) throws Exception {
 		fService.insert(fVo);
-		return "redirect:/";
+		return "redirect:/home";
 	}
 
 	@GetMapping("/allview")

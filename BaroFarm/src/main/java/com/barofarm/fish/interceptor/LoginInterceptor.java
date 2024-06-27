@@ -18,7 +18,7 @@ public class LoginInterceptor implements HandlerInterceptor{
 			Object getSession = session.getAttribute("user_id");
 			
 			if(getSession == null) {
-				response.sendRedirect(request.getContextPath()+"/");
+				response.sendRedirect(request.getContextPath()+"/home");
 				// Controller에서 home.html로 연결시키는 식별자 /
 				return false;
 			}

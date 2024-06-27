@@ -1,0 +1,115 @@
+@charset "EUC-KR";
+
+*{
+	font-family: Pretendard SemiBold;
+}
+
+body{
+	margin: 0;
+	margin-top: 0;
+}
+
+
+#wrapper{
+	
+	height:300px;
+	display:grid;
+	grid-template-columns:170px 1fr;
+	/* | columns // คั rows*/
+	grid-template-rows:100px 1fr 250%;
+	grid-template-areas:
+	"box1 box1 box1"
+	"box2 box3 box3"
+	"box2 box3 box3"
+}
+.logo{
+	float: left;
+	/*  background-color: lime; */
+	height: 60px;
+	width: 100px;
+	margin-left:30px;
+	background-image: url(/img/tree.png);
+	background-size: 100% 100%;
+}
+.box1{
+	/* background-color: #3689ff; */
+	grid-area:box1;
+	text-align: center;
+	margin-top:20px;
+	
+}
+.box1 > span{
+	font-size: 40px;
+	color: rgb(44,74,58);
+
+}
+.box2{
+/*  	background-color: #00cf12; */
+	background-color:  rgb(44,74,58);
+	grid-area:box2;
+
+}
+.box3{
+	background-color: red;
+	grid-area:box3;
+}
+.content_1{
+	margin-left:10px;
+	margin-top:20px;
+	margin-right:10px;
+	
+	background-color: aqua;
+	height: 250px;
+}
+
+.content_2{
+	margin-left:10px;
+	margin-top:10px;
+	margin-right:10px;
+	background-color: fuchsia;
+	height: 200px;
+}
+
+.content_3{
+	margin-left:10px;
+	margin-top:10px;
+	margin-right:10px;
+	background-color: orange;
+	height: 150px;
+}
+/* .content_1{
+	grid-area:content_1;
+	background-color: white;
+}
+
+.content_2{
+	grid-area:content_2;
+	background-color: blue;
+}
+
+.content_3{
+	grid-area:content_3;
+	background-color: yellow;
+}
+ */
+.nav{
+	list-style-type: none;
+	line-height: 50px;
+
+}
+.menu_bar > a{
+	text-decoration: none;
+	color:white;
+}
+
+.admin{
+	/*  background-color: white;*/
+	float:right;
+	margin-right:20px;
+	margin-top:50px;
+}
+
+.admin_bar > a{
+	text-decoration: none;
+	color:rgb(44,74,58);
+}
