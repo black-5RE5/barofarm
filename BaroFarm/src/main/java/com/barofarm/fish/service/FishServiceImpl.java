@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.barofarm.fish.dao.IF_FishDao;
 import com.barofarm.fish.vo.FishVo;
+import com.barofarm.fish.vo.PageVO;
 
 @Service
 public class FishServiceImpl implements IF_FishService{
@@ -20,9 +21,9 @@ public class FishServiceImpl implements IF_FishService{
 	}
 
 	@Override
-	public List<FishVo> allview() throws Exception {
+	public List<FishVo> allview(PageVO pagevo) throws Exception {
 	
-		return fDao.allview();
+		return fDao.allview(pagevo);
 	}
 
 	@Override
@@ -73,6 +74,12 @@ public class FishServiceImpl implements IF_FishService{
 	public List<FishVo> fishView() {
 		List<FishVo> fish = fDao.fishView();
 		return fish;
+	}
+
+	@Override
+	public int getTotalCount() throws Exception {
+		// TODO Auto-generated method stub
+		return fDao.getTotalCount();
 	}
 
 

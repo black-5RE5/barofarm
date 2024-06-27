@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import com.barofarm.fish.vo.FishVo;
+import com.barofarm.fish.vo.PageVO;
 
 @Repository
 @Primary
@@ -24,8 +25,8 @@ public class FishDaoImpl implements IF_FishDao{
 	}
 
 	@Override
-	public List<FishVo> allview() throws Exception {
-		return sqlsession.selectList(mapperQuery+".select");
+	public List<FishVo> allview(PageVO pagevo) throws Exception {
+		return sqlsession.selectList(mapperQuery+".select", pagevo);
 	}
 
 	@Override
@@ -69,6 +70,12 @@ public class FishDaoImpl implements IF_FishDao{
 	@Override//수산물 전체
 	public List<FishVo> fishView() {
 		return sqlsession.selectList(mapperQuery+".fish");
+	}
+
+	@Override
+	public int getTotalCount() throws Exception {
+		// TODO Auto-generated method stub
+		return sqlsession.selectOne(mapperQuery+".getTotalCount");
 	}
 
 	
