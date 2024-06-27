@@ -64,13 +64,13 @@ public class LoginController {
 		}	
 		}else {	
 		}
-		return "redirect:/";
+		return "redirect:/home";
 	}
 	
 	@GetMapping("logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "redirect:/";
+		return "redirect:/home";
 	}
 
 }
