@@ -44,31 +44,20 @@ public class FishDaoImpl implements IF_FishDao{
 		sqlsession.update(mapperQuery+".update",fVo);
 	}
 
-	@Override //농산물 전체
-	public List<FishVo> fruitView() {
-		return sqlsession.selectList(mapperQuery+".fruit");
+
+	@Override//상세보기
+	public FishVo detail(String name) {
+		return sqlsession.selectOne(mapperQuery+".detail", name);
 	}
-	@Override//과일 전체
-	public List<FishVo> fruitFruit() {
-		return sqlsession.selectList(mapperQuery+".fruitFruit");
+
+	@Override//대분류
+	public List<FishVo> view(String category) {
+		return sqlsession.selectList(mapperQuery+".view", category);
 	}
-	@Override//채소 전체
-	public List<FishVo> fruitVege() {
-		return sqlsession.selectList(mapperQuery+".fruitVege");
-	}
-	@Override//곡물 전체
-	public List<FishVo> fruitGrain() {
-		return sqlsession.selectList(mapperQuery+".fruitGrain");
-	}
-	
-	
-	@Override//축산물 전체
-	public List<FishVo> meatView() {
-		return sqlsession.selectList(mapperQuery+".meat");
-	}
-	@Override//수산물 전체
-	public List<FishVo> fishView() {
-		return sqlsession.selectList(mapperQuery+".fish");
+
+	@Override//중분류
+	public List<FishVo> middleview(String middlecategory) {
+		return sqlsession.selectList(mapperQuery+".middleview", middlecategory);
 	}
 
 	

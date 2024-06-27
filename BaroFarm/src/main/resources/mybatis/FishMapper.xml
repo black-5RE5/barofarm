@@ -34,25 +34,18 @@
   where product_no=#{product_no}
   </update>
   
-  <select id="fruit" resultType="com.barofarm.fish.vo.FishVo">
-  	select * from product where product_cate='농산';
+  
+  <select id="detail" resultType="com.barofarm.fish.vo.FishVo">
+  	select * from product where product_name=#{product_name}
   </select>
-  <select id="fruitFruit" resultType="com.barofarm.fish.vo.FishVo">
-  	select * from product where product_middle='과일';
+  
+  <select id="view" resultType="com.barofarm.fish.vo.FishVo">
+  	select * from product where product_cate=#{product_cate}
   </select>
-  <select id="fruitVege" resultType="com.barofarm.fish.vo.FishVo">
-  	select * from product where product_middle='채소';
-  </select>
-  <select id="fruitGrain" resultType="com.barofarm.fish.vo.FishVo">
-  	select * from product where product_middle='곡물';
+  
+  <select id="middleview" resultType="com.barofarm.fish.vo.FishVo">
+  	select * from product where product_middle=#{product_middle}
   </select>
   
   
-  <select id="meat" resultType="com.barofarm.fish.vo.FishVo">
-  	select * from product where product_cate='축산';
-  </select>
-  
-  <select id="fish" resultType="com.barofarm.fish.vo.FishVo">
-  	select * from product where product_cate='수산';
-  </select>
   </mapper>

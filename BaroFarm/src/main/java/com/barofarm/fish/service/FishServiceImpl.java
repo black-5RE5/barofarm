@@ -42,37 +42,23 @@ public class FishServiceImpl implements IF_FishService{
 		fDao.update(fVo);
 	}
 
-	@Override //농산물 전체
-	public List<FishVo> fruitView() {
-		List<FishVo> fruit = fDao.fruitView();
-		return fruit;
-	}
-	@Override//과일 전체
-	public List<FishVo> fruitFruit() {
-		List<FishVo> fruitFruit = fDao.fruitFruit();
-		return fruitFruit;
-	}
-	@Override//채소 전체
-	public List<FishVo> fruitVege() {
-		List<FishVo> fruitVege = fDao.fruitVege();
-		return fruitVege;
-	}
-	@Override//곡물 전체
-	public List<FishVo> fruitGrain() {
-		List<FishVo> fruitGrain = fDao.fruitGrain();
-		return fruitGrain;
+
+	@Override //상세보기
+	public FishVo detail(String name) {
+		FishVo detail = fDao.detail(name);
+		return detail;
 	}
 
-	@Override
-	public List<FishVo> meatView() {
-		List<FishVo> meat = fDao.meatView();
-		return meat;
+	@Override//대분류
+	public List<FishVo> view(String category) {
+		List<FishVo> vo = fDao.view(category);
+		return vo;
 	}
 
-	@Override
-	public List<FishVo> fishView() {
-		List<FishVo> fish = fDao.fishView();
-		return fish;
+	@Override//중분류
+	public List<FishVo> middleview(String middlecategory) {
+		List<FishVo> vo = fDao.middleview(middlecategory);
+		return vo;
 	}
 
 
