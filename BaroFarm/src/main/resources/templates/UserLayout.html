@@ -8,7 +8,7 @@
 <body>
 	<header>
 		<div class="info">
-			<span><a href="home">관리자</a></span> <span><a href="login_main">로그인</a></span> <span><a href="mypage">마이페이지</a></span>
+			<span><a th:href="@{home}">관리자</a></span> <span><a th:href="@{login_main}">로그인</a></span> <span><a th:href="@{mypage}">마이페이지</a></span>
 		</div>
 		<div class="logo">
 			<img alt="로고" src="/img/tree.png" class="tree">
@@ -19,27 +19,22 @@
 	</header>
 	<nav>
 		<div class="homes">
-			<span class="home"><a href="/">바로팜</a></span>
+			<span class="home"><a th:href="@{/}">바로팜</a></span>
 		</div>
-		<!-- <div class="category">
-			<span><a href=#>농산물</a></span> 
-			<span><a href=#>수산물</a></span> 
-			<span><a href=#>축산물</a></span>
-		</div> -->
 		<div class="category">
-			<span class="dropdown"> <a href="fruitview">농산물</a>
+			<span class="dropdown"> <a th:href="@{view(product_cate='농산')}">농산물</a>
 				<div class="dropdownContent">
-					<a href="fruitFruit">과일</a> <a href="fruitVege">채소</a> <a href="fruitGrain">쌀/잡곡</a>
+					<a th:href="@{middleview(product_middle='과일')}">과일</a> <a th:href="@{middleview(product_middle='채소')}">채소</a> <a th:href="@{middleview(product_middle='곡물')}">쌀/잡곡</a>
 				</div>
 			</span> 
-			<span class="dropdown"> <a href="#">수산물</a>
+			<span class="dropdown"> <a th:href="@{view(product_cate='수산')}">수산물</a>
 				<div class="dropdownContent">
-					<a href="#">생선</a> <a href="#">해물</a> <a href="#">갑각류</a>
+					<a th:href="@{middleview(product_middle='생선')}">생선</a> <a th:href="@{middleview(product_middle='해물')}">해물</a> <a th:href="@{middleview(product_middle='갑각류')}">갑각류</a>
 				</div>
 			</span> 
-			<span class="dropdown"> <a href="#">축산물</a>
+			<span class="dropdown"> <a th:href="@{view(product_cate='축산')}">축산물</a>
 				<div class="dropdownContent">
-					<a href="#">소고기</a> <a href="#">돼지고기</a> <a href="#">양고기</a>
+					<a th:href="@{middleview(product_middle='소')}">소고기</a> <a th:href="@{middleview(product_middle='돼지')}">돼지고기</a> <a th:href="@{middleview(product_middle='양')}">양고기</a>
 				</div>
 			</span>
 		</div>

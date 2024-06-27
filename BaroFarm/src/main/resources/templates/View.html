@@ -9,8 +9,8 @@
 	<header th:replace="~{UserLayout::header}"></header>
 	<nav th:replace="~{UserLayout::nav}"></nav>
 	<main>
-		<div class="m1">
-			<div><span class="title"><a th:href="@{view(product_cate='농산')}">농산물</a></span></div>
+		<div class="m1" >
+			<div><span class="title"><a th:href="@{view(product_cate='농산')}">농산물 </a></span></div><!-- 여기부터 해야함 -->
 			<div class="m1_a">
 				<a th:href="@{middleview(product_middle='과일')}">과일 |</a>
 				<a th:href="@{middleview(product_middle='채소')}">채소 |</a>
@@ -18,13 +18,13 @@
 			</div>
 		</div>
 		<div class="m2" >
-			<div class="grid" th:each="fruit:${fruitVo}">
+			<div class="grid" th:each="product:${Vo}">
 				<div class="img">
-					<a th:href="@{detail}"><img alt="상품사진" src="/img/양구쌀.jpg" class="proImg" ></a> <!-- db사진 연결  -->
+					<a th:href="@{detail(product_name=${product.product_name})}"><img alt="상품사진" src="/img/양구쌀.jpg" class="proImg" ></a> <!-- db사진 연결  -->
 				</div>
 				<div class="detail">
-					<a th:href="@{detail(product_name=${fruit.product_name})}" class="product_name">상품명 : [[${fruit.product_name}]]</a>
-					<div class="product_price">상품 가격 : [[${#numbers.formatInteger(fruit.product_price, 3, 'COMMA')}]]원</div>
+					<a th:href="@{detail(product_name=${product.product_name})}" class="product_name">상품명 : [[${product.product_name}]]</a>
+					<div class="product_price">상품 가격 : [[${#numbers.formatInteger(product.product_price, 3, 'COMMA')}]]원</div>
 				</div>
 			</div>
 		</div>

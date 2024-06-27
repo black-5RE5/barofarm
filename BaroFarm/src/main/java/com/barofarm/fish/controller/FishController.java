@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.barofarm.fish.service.IF_FishService;
 import com.barofarm.fish.vo.FishVo;
@@ -112,45 +113,33 @@ public class FishController {
 		return "UserMain";
 	}
 
-	@GetMapping("fruitview")//농산물전체
-	public String fruit(Model model) throws Exception {
-		List<FishVo> fruitVo=fService.fruitView();
-		System.out.println("상품 상세보기"+fruitVo.toString());
-		model.addAttribute("fruitVo", fruitVo);
-		return "FruitView";
-	}
-	@GetMapping("fruitFruit")//과일 전체보기
-	public String fruitFruit(Model model) throws Exception {
-		List<FishVo> fruitFruit=fService.fruitFruit();
-		model.addAttribute("fruitFruit", fruitFruit);
-		return "Fruit_Fruit";
-	}
-	@GetMapping("fruitVege")//채소 전체보기
-	public String fruitVege(Model model) throws Exception {
-		List<FishVo> fruitVege=fService.fruitVege();
-		model.addAttribute("fruitVege", fruitVege);
-		return "Fruit_Vegetable";
-	}
-	@GetMapping("fruitGrain")//곡물 전체보기
-	public String fruitGrain(Model model) throws Exception {
-		List<FishVo> fruitGrain=fService.fruitGrain();
-		model.addAttribute("fruitGrain", fruitGrain);
-		return "Fruit_Grains";
-	}
-	//상세보기 어떻게 해야하냐 ..
-	@GetMapping("fruitDetail")//농산물 상세보기 예시
-	public String fruitdetail(Model model) throws Exception {
-		List<FishVo> fruitVo=fService.fruitView();
-		System.out.println("상품 상세보기"+fruitVo.toString());
-		model.addAttribute("fruitVo", fruitVo);
-		return "FruitDetail";
+	
+	//대분류
+	@GetMapping("view")
+	public String view(@RequestParam("product_cate") String category , Model model) throws Exception {
+		List<FishVo> Vo=fService.view(category);
+		model.addAttribute("Vo", Vo);
+		System.out.println(Vo.toString());
+		return "View";
 	}
 
-	@GetMapping("fishview")//수산물전체
-	public String fish(Model model) throws Exception {
-		List<FishVo> fishVo=fService.fishView();
-		System.out.println("상품 상세보기"+fishVo.toString());
-		model.addAttribute("fishVo", fishVo);
-		return "FishView";
+	//상세보기
+	@GetMapping("detail")
+	public String detail(@RequestParam("product_name") String name, Model model) throws Exception {
+		FishVo detailVo=fService.detail(name);
+		model.addAttribute("detailVo", detailVo);
+		System.out.println("상세보기"+detailVo.toString());
+		return "FruitDetail";
 	}
+	
+	//중분류
+		@GetMapping("middleview")
+		public String middleview(@RequestParam("product_middle") String middlecategory , Model model) throws Exception {
+			List<FishVo> Vo=fService.middleview(middlecategory);
+			model.addAttribute("Vo", Vo);
+			System.out.println(Vo.toString());
+			return "View";
+		}
+
+
 }

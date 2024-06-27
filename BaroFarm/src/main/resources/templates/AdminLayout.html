@@ -1,6 +1,5 @@
-<!-- 개발자:son -->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" ><!-- 추가 -->
+<html xmlns:th="http://www.thymeleaf.org" >
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -17,7 +16,11 @@
 	</header>
 	<nav th:fragment="nav">
 		<div class="category">
+<<<<<<< HEAD
+			<span><a th:href="@{add}">상품 등록</a></span> <span><a th:href="@{allview}">전체보기/수정/삭제</a></span> <span><a th:href="@{#}">회원정보 조회</a></span> <span><a th:href="@{#}">공지사항 관리</a></span>
+=======
 			<span><a href=/add>상품 등록</a></span> <span><a href=/allview>전체보기/수정/삭제</a></span> <span><a href=/u_view>회원정보 조회</a></span> <span><a href=/notice>공지사항 관리</a></span>
+>>>>>>> 65b3721fda1a95f8563f2061e9a39a7f92f171e3
 		</div>
 	</nav>
 	<main>

@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-
-/*레이아읏 개발중.. 개발자 :son*/
 *{
 	font-family: Pretendard SemiBold;
 }
@@ -114,9 +112,6 @@ main .m2{
 	grid-column-gap:3rem;
 	grid-row-gap:3rem;
 }
-main .m2 .grid{
-	border: 0.2rem solid red;
-}
 main .grid .img{
 	height:80%;
 	border: solid 2px rgb(44,74,58);
@@ -136,22 +131,44 @@ main .detail .product_price{
 	margin-top: 0.5rem;
 	color: rgb(44,74,58);
 }
-/*
-main .m2 .img{
-	width: 20rem;
-	height: 20rem;
+
+main .m3{
+	display:flex;
+	margin-top:3rem;
+	margin-left:3rem;
+	margin-right:3rem;
+}
+main .m3 .img{
+	width: 30rem;
 	border: 0.2rem solid rgb(44,74,58);
 }
-main .m2 .productDetail{
+main .m3 .productDetail{
+	display:flex;
 	border: 0.2rem solid rgb(44,74,58);
 	width: 39.5rem;
 	height:30rem;
 	border-left: none;
 	border-right: none;
+	margin-left: 4rem;
 }
-main .m2 a{
-	display:block;
-	text-decoration: none;
-	color: black;
-	
-}*/
+main .m3 .product_name{
+	margin-top:3rem;
+	font-size: 2rem;
+	color: rgb(44,74,58);
+}
+main .m3 .product_price, .product_origin, .product_deliveryCost, .product_cnt, .product_cart{
+	margin-top:2rem;
+	font-size: 1.3rem;
+	color: rgb(44,74,58);
+}
+main .m3 input[type="submit"]{
+	border:none;
+	background-color: rgb(44,74,58);
+	color: white;
+	padding: 0.5rem;
+}
+main .m3 input[type="button"]{
+	border: 1px solid rgb(44,74,58);
+	background-color: rgb(245, 241, 206);
+	color:rgb(44,74,58);
+}
