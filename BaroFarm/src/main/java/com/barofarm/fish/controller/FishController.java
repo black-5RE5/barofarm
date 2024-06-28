@@ -75,14 +75,14 @@ public class FishController {
 		return "redirect:/allview";
 	}
 
-	// 마이페이지 개발중 - 담당자 meat
+	// 담당자 meat
 	@GetMapping("/mypage")
 	public String mypage() {
 
 		return "mypage";
 	}
 
-	// 마이페이지 회원정보 수정시 update 작업해야함 -담당자 meat-
+	//-담당자 meat-
 	@GetMapping("/memberUpdate")
 	public String memberUpdate() {
 

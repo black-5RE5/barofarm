@@ -72,27 +72,27 @@
 			</div>
 			<hr class="hr_2" align="center">
 		</div>
-		<!-- 페이징 가운데 정렬 해야함 -->
-		<div id="page">
+		<!-- 페이징 완료  담당자:meat-->
+	</main>
+		<div class="page">
 			<tr>
 				<td colspan=4 align=center>
 					<div th:if="${pagevo.prev}">
-						<a href="@{'/allview?page=' + (${pagevo.startPage -1})}">[이전페이지그룹]</a>
+						<a class="page" href="@{'/allview?page=' + (${pagevo.startPage -1})}">[이전페이지그룹]</a>
 					</div> 
 					<div th:each="idx : ${#numbers.sequence(pagevo.startPage, pagevo.endPage)}">
-						<a th:href="@{'/allview?page=' + ${idx}}"> 
+						<a class="page" th:href="@{'/allview?page=' + ${idx}}"> 
 							<span th:if="${idx == pagevo.page }">[</span>
 							<span th:text="${idx}">idx</span>
 							<span th:if="${idx == pagevo.page}">]</span>
 						</a>
 					</div> 
 					<div th:if="${pagevo.next}">
-						<a  th:href="@{'/allview?page=/ + (${pagevo.endPage +1})}">[다음페이지그룹]</a>
+						<a class="page" th:href="@{'/allview?page=/ + (${pagevo.endPage +1})}">[다음페이지그룹]</a>
 					</div>
 				</td>
 			</tr>
 		</div>
-	</main>
 	<script th:src="@{/js/product/add.js}" type="text/javascript" defer></script>
 </body>
 </html>
