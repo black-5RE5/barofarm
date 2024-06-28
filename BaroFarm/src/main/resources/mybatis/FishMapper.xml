@@ -2,53 +2,6 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<<<<<<< HEAD
-  <insert id="insert" parameterType="com.barofarm.fish.vo.FishVo">
-  insert into product values(
-  	#{product_cate},
-  	#{product_middle},
- 	null,
- 	#{product_name},
-  	#{product_price},
-  	#{product_origin},
-  	#{product_stock} 
-  )  
-  </insert>
-  
-  <select id="select" resultType="com.barofarm.fish.vo.FishVo">
-  	select *from product
-  </select>
-  
-  <delete id="delete" parameterType="int">
-  	delete from product where product_no=#{product_no}
-  </delete>
-  
-  <select id="modify" resultType="com.barofarm.fish.vo.FishVo">
-	select *from product where product_no=#{product_no} 
-	  
-  </select>
-  
-  <update id="update" parameterType="com.barofarm.fish.vo.FishVo">
-  update product set product_cate=#{product_cate},product_middle=#{product_middle},product_name=#{product_name},product_price=#{product_price},product_origin=#{product_origin},product_stock=#{product_stock}
-  where product_no=#{product_no}
-  </update>
-  
-  
-  <select id="detail" resultType="com.barofarm.fish.vo.FishVo">
-  	select * from product where product_name=#{product_name}
-  </select>
-  
-  <select id="view" resultType="com.barofarm.fish.vo.FishVo">
-  	select * from product where product_cate=#{product_cate}
-  </select>
-  
-  <select id="middleview" resultType="com.barofarm.fish.vo.FishVo">
-  	select * from product where product_middle=#{product_middle}
-  </select>
-  
-  
-  </mapper>
-=======
 <mapper namespace="com.barofarm.fish.dao.IF_FishDao">
 
 	<insert id="insert" parameterType="com.barofarm.fish.vo.FishVo">
@@ -64,16 +17,20 @@
 	</insert>
 
 	<select id="select" resultType="com.barofarm.fish.vo.FishVo">
-		select * from product order by product_no asc
-		offset #{startNo} rows fetch next #{perPageNum} rows only
+		select * from product order by
+		product_no asc
+		offset #{startNo} rows fetch next #{perPageNum} rows
+		only
 	</select>
 
 	<delete id="delete" parameterType="int">
-		delete from product where product_no=#{product_no}
+		delete from product where
+		product_no=#{product_no}
 	</delete>
 
 	<select id="modify" resultType="com.barofarm.fish.vo.FishVo">
-		select *from product where product_no=#{product_no}
+		select *from product where
+		product_no=#{product_no}
 
 	</select>
 
@@ -83,30 +40,19 @@
 		where product_no=#{product_no}
 	</update>
 
-	<select id="fruit" resultType="com.barofarm.fish.vo.FishVo">
-		select * from product where product_cate='농산';
-	</select>
-	<select id="fruitFruit" resultType="com.barofarm.fish.vo.FishVo">
-		select * from product where product_middle='과일';
-	</select>
-	<select id="fruitVege" resultType="com.barofarm.fish.vo.FishVo">
-		select * from product where product_middle='채소';
-	</select>
-	<select id="fruitGrain" resultType="com.barofarm.fish.vo.FishVo">
-		select * from product where product_middle='곡물';
-	</select>
-
-
-	<select id="meat" resultType="com.barofarm.fish.vo.FishVo">
-		select * from product where product_cate='축산';
-	</select>
-
-	<select id="fish" resultType="com.barofarm.fish.vo.FishVo">
-		select * from product where product_cate='수산';
-	</select>
-	
 	<select id="getTotalCount">
 		select count(*) from product
 	</select>
+
+	<select id="detail" resultType="com.barofarm.fish.vo.FishVo">
+		select * from product where product_name=#{product_name}
+	</select>
+
+	<select id="view" resultType="com.barofarm.fish.vo.FishVo">
+		select * from product where product_cate=#{product_cate}
+	</select>
+
+	<select id="middleview" resultType="com.barofarm.fish.vo.FishVo">
+		select * from product where product_middle=#{product_middle}
+	</select>
 </mapper>
->>>>>>> 65b3721fda1a95f8563f2061e9a39a7f92f171e3
