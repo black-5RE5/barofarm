@@ -118,10 +118,27 @@ public class FishController {
 	@GetMapping("view")
 	public String view(@RequestParam("product_cate") String category , Model model) throws Exception {
 		List<FishVo> Vo=fService.view(category);
-		model.addAttribute("Vo", Vo);
-		System.out.println(Vo.toString());
+		model.addAttribute("Vo",Vo);
+		System.out.println(Vo);
+		
 		return "View";
 	}
+//	//대분류
+//	@GetMapping("fishview")
+//	public String fishview(@RequestParam("product_cate") String category , Model model) throws Exception {
+//		List<FishVo> Vo=fService.view(category);
+//		model.addAttribute("Vo", Vo);
+//		System.out.println(Vo.toString());
+//		return "FishView";
+//	}
+//	//대분류
+//	@GetMapping("meatview")
+//	public String meatview(@RequestParam("product_cate") String category , Model model) throws Exception {
+//		List<FishVo> Vo=fService.view(category);
+//		model.addAttribute("Vo", Vo);
+//		System.out.println(Vo.toString());
+//		return "MeatView";
+//	}
 
 	//상세보기
 	@GetMapping("detail")

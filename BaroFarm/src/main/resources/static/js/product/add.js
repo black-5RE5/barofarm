@@ -41,6 +41,10 @@ $(document).ready(function() {
 function delchk(){
 	return confirm("정말로 삭제하시겠습니까?")
 }
+<<<<<<< HEAD
+document.getElementsByTagName("a")
+=======
 
 
 
+>>>>>>> 53d0130de0626e459c82ede9233f48706b7c0ab1
