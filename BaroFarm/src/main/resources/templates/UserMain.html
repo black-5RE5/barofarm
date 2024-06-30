@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>BaroFarm</title>
 </head>
 <link rel="stylesheet" type="text/css" th:href="@{css/UserMain.css}">
 <body>
@@ -13,19 +13,30 @@
 			<img src="/img/밭1.jpg" alt="메인사진" class="mainImg">
 		</div>
 		<div class="m1">
-			<div>1</div>
-			<div>2</div>
-			<div>3</div>
-			<div>4</div>
+			<div class="m1_div1">
+				<span>Fruit</span>
+				<!-- <img alt="사과" th:src="@{img/사과.png}" class="m1_div1_img"> -->
+			</div>
+			<div class="m1_div2">
+				<span>Grain</span>
+				<img alt="" src="">
+			</div>
+			<div class="m1_div3">
+				<span>Fish</span>
+				<img alt="" src="">
+			</div>
+			<div class="m1_div4">
+				<span>Meat</span>
+				<img alt="" src="">
+			</div>
 		</div>
 		<div class="m2">
 			<span>설명..</span>
 		</div>
 		<div class="m3">
-			<div>1</div>
-			<div>2</div>
-			<div>3</div>
+			<img alt="농부" th:src="@{img/농부1.jpg}" class="m3_img">
 		</div>
+		<div class="m4"><div class="m4_div"></div><img alt="" th:src="@{img/농부2.jpg}"class="m4_img"></div>
 	</main>
 </body>
 </html>
