@@ -1,9 +1,5 @@
 package com.barofarm.fish.vo;
 
-import java.util.List;
-
-import org.springframework.web.multipart.MultipartFile;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -19,6 +15,5 @@ public class FishVo {
 	private int product_price=0;
 	private String product_origin=null;
 	private int product_stock=0;
-	private List<MultipartFile> dealFiles; //사진첨부
 	
 }
