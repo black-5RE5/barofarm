@@ -9,7 +9,7 @@
 	<header th:replace="~{UserLayout::header}"></header>
 	<nav th:replace="~{UserLayout::nav}"></nav>
 	<main >
-		<div class="m1">
+		<!-- <div class="m1">
 			<div>
 				<a class="title" th:href="@{view(product_cate='농산')}" id="fruit"><span class="text">농산물</span></a>
 			</div>
@@ -18,11 +18,11 @@
 				<a th:href="@{middleview(product_middle='채소')}" id="fruit_vage">채소 |</a>
 				<a th:href="@{middleview(product_middle='곡물')}" id="fruit_grains">쌀/잡곡</a>
 			</div>
-		</div>
+		</div> -->
 		<div class="m2" >
 			<div class="grid" th:each="product:${Vo}">
 				<div class="img">
-					<a th:href="@{detail(product_name=${product.product_name})}"><img alt="상품사진" src="/img/양구쌀.jpg" class="proImg" ></a>
+					<a th:href="@{detail(product_name=${product.product_name})}"><img alt="상품사진" src="/img/그림2.png" class="proImg" ></a>
 				</div>
 				<div class="detail">
 					<a th:href="@{detail(product_name=${product.product_name})}" class="product_name">상품명 : [[${product.product_name}]]</a>
@@ -32,5 +32,4 @@
 		</div>
 	</main>
 </body>
-<script th:src="@{js/product/test.js}" type="text/javascript" defer></script>
 </html>

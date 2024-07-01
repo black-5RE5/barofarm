@@ -4,10 +4,12 @@
 <meta charset="UTF-8">
 <title>회원 관리</title>
 </head>
+<link rel="stylesheet" type="text/css" th:href="@{css/AdminLayout2.css}">
 <link th:href="@{/css/user_view.css}" rel="stylesheet" type="text/css" />
 
 <body>
-
+	<header th:replace="~{AdminLayout::header}"></header>
+	<nav th:replace="~{AdminLayout::nav}"></nav>
 	<font id="title"> 회원 정보 </font>
 	<hr class="hr">	<br>
 	<hr class="hr_1">

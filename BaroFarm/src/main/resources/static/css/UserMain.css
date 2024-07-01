@@ -89,9 +89,6 @@ nav .dropdown:hover .dropdownContent {
     display: block;
 }
 
-.m1, .m2, .m3 {
-	border: 0.05rem solid green;
-}
 main .m1{
 	display: flex;
 	justify-content: center;
@@ -129,9 +126,21 @@ main .m2 {
 	display: flex;
 	justify-content: center;
 	width: 23rem;
-	height: 20rem;
+	height: 10rem;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 2rem;
+}
+main .m2 .m2_1{
+	color: rgb(44,74,58);
+	font-size: 5rem;
+	margin-top: 0.8rem;
+}
+main .m2 .m2_2{
+	color: rgb(44,74,58);
+	font-family: Pretendard ExtraBold;
+	margin-top: 2rem;
+	margin-left: 1rem;
 }
 main .mainImg{
 	width: 100%;
@@ -142,18 +151,27 @@ main .m3{
 	justify-content:center;
 }
 main .m3_img{
-	width: 40%;
+	width: 41.5%;
+	margin-bottom: 1rem;
 }
 main .m4{
 	display:flex;
 	justify-content:center;
+	margin-bottom: 3rem;
+}
+main .m4 p{
+	color: white;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	line-height: 2em;
 }
 main .m4 div{
 	background-color: rgb(44,75,53);
 	width: 20%;
-	height: 30rem;
+	height:23.65rem;
+	margin-right: 1rem;
 }
 main .m4_img{
 	width: 20%;
-	height: 30rem;
+	height: 20%;
 }

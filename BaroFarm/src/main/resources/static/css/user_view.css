@@ -45,7 +45,7 @@ a{
 	font-weight: bold;
 }
 a:hover {
-	color:red;
+	/*color:red;*/
 }
 .fish_table{
 	table-layout:fixed;

@@ -55,7 +55,6 @@ public class FishDaoImpl implements IF_FishDao{
 	public List<FishVo> view(String category) {
 		return sqlsession.selectList(mapperQuery+".view", category);
 	}
-
 	@Override//중분류
 	public List<FishVo> middleview(String middlecategory) {
 		return sqlsession.selectList(mapperQuery+".middleview", middlecategory);
