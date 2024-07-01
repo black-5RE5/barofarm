@@ -25,22 +25,20 @@
 		<div class="category">
 			<span class="dropdown"> <a th:href="@{view(product_cate='농산')}">농산물</a>
 				<div class="dropdownContent">
-					<a th:href="@{middleview(product_middle='과일')}">과일</a> <a th:href="@{middleview(product_middle='채소')}">채소</a> <a th:href="@{middleview(product_middle='곡물')}">쌀/잡곡</a>
+					<a th:href="@{middleview(product_middle='과일')}" >과일</a> <a th:href="@{middleview(product_middle='채소')}" >채소</a> <a th:href="@{middleview(product_middle='곡물')}" >쌀/잡곡</a>
 				</div>
 			</span> 
-			<span class="dropdown"> <a th:href="@{view(product_cate='수산')}" id="fish">수산물</a>
+			<span class="dropdown"> <a th:href="@{view(product_cate='수산')}" >수산물</a>
 				<div class="dropdownContent">
-					<a th:href="@{middleview(product_middle='생선')}">생선</a> <a th:href="@{middleview(product_middle='해물')}">해물</a> <a th:href="@{middleview(product_middle='갑각류')}">갑각류</a>
+					<a th:href="@{middleview(product_middle='생선')}">생선</a> <a th:href="@{middleview(product_middle='해물')}" >해물</a> <a th:href="@{middleview(product_middle='갑각류')}" >갑각류</a>
 				</div>
 			</span> 
-			<span class="dropdown"> <a th:href="@{view(product_cate='축산')}" id="meat">축산물</a>
+			<span class="dropdown"> <a th:href="@{view(product_cate='축산')}">축산물</a>
 				<div class="dropdownContent">
-					<a th:href="@{middleview(product_middle='소')}">소고기</a> <a th:href="@{middleview(product_middle='돼지')}">돼지고기</a> <a th:href="@{middleview(product_middle='양')}">양고기</a>
+					<a th:href="@{middleview(product_middle='소')}" >소고기</a> <a th:href="@{middleview(product_middle='돼지')}" >돼지고기</a> <a th:href="@{middleview(product_middle='양')}" >양고기</a>
 				</div>
 			</span>
 		</div>
 	</nav>
-	<script th:src="@{/js/product/add.js}" type="text/javascript" defer></script>
 </body>
-<script th:src="@{js/product/test.js}" type="text/javascript" defer></script>
 </html>

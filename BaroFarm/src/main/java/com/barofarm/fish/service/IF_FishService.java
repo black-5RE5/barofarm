@@ -13,9 +13,9 @@ public interface IF_FishService {
 	public FishVo modify(int no) throws Exception;
 	public void update(FishVo fVo) throws Exception;
 	
-	public FishVo detail(String name); //상세보기
 	public List<FishVo> view(String category);//대분류 
 	public List<FishVo> middleview(String middlecategory);//중분류
+	public FishVo detail(String name); //상세보기
 	
 	public int getTotalCount() throws Exception;
 	
