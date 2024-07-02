@@ -12,18 +12,19 @@
 		<nav th:replace="~{UserLayout::nav}"></nav>
 	<article>
 		<h3>마이페이지</h3>
-		<h5>000님 안녕하세요</h5>
+		<span th:text="${session.user_name}"></span><span>님 안녕하세요</span>
 	</article>
 	<main>
 		<aside th:replace="~{UserLayout::aside}"></aside>
 		<div class="member">
 			<div class="container">
 				<h4>회원 정보 수정</h4>
-				<form action="memberUpdate" method="post">
-					<label>회원정보</label> <input type="text" placeholder="원래 아이디 보이기"
-						name="user_id"> <input type="password" placeholder="*****"
-						name="user_pass"> <label>주소 정보</label> <input type="text"
-						placeholder="주소" name="address">
+				<form action="memberUpdate" method="get">
+					<label>회원정보</label> 
+						<input type="text" th:value="${session.user_id}" name="user_id"> 
+ 						<input type="password" placeholder="*****" name="user_pass"> 
+					<label>주소 정보</label> 
+						<input type="text"  placeholder="주소"  name="address"> 
 					<button type="submit" class="btn">수정</button>
 				</form>
 			</div>

@@ -45,7 +45,7 @@
 	</select>
 
 	<select id="detail" resultType="com.barofarm.fish.vo.FishVo">
-		select * from product where product_name=#{product_name}
+		select * from product where product_no=#{product_no}
 	</select>
 
 	<select id="view" resultType="com.barofarm.fish.vo.FishVo">
@@ -55,4 +55,5 @@
 	<select id="middleview" resultType="com.barofarm.fish.vo.FishVo">
 		select * from product where product_middle=#{product_middle}
 	</select>
+
 </mapper>

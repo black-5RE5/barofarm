@@ -41,7 +41,7 @@ aside {
 	padding-bottom: 100%;
 }
 
-h3, h5 {
+h3, h5, article span {
 	margin: 0;
 	color: white;
 	padding-right: 15px;
@@ -191,4 +191,10 @@ th:nth-child(4), td:nth-child(4) {
 #notice, th, td {
 	border-left: none;
 	border-right: none;
+}
+input[type="submit"]{
+	border:none;
+	background-color: rgb(44,74,58);
+	color: white;
+	padding: 0.5rem;
 }

@@ -22,10 +22,10 @@
 		<div class="m2" >
 			<div class="grid" th:each="product:${Vo}">
 				<div class="img">
-					<a th:href="@{detail(product_name=${product.product_name})}"><img alt="상품사진" src="/img/그림2.png" class="proImg" ></a>
+					<a th:href="@{detail(product_no=${product.product_no})}"><img alt="상품사진" src="/img/그림2.png" class="proImg" ></a>
 				</div>
 				<div class="detail">
-					<a th:href="@{detail(product_name=${product.product_name})}" class="product_name">상품명 : [[${product.product_name}]]</a>
+					<a th:href="@{detail(product_no=${product.product_no})}" class="product_name">상품명 : [[${product.product_name}]]</a>
 					<div class="product_price">상품 가격 : [[${#numbers.formatInteger(product.product_price, 3, 'COMMA')}]]원</div>
 				</div>
 			</div>
