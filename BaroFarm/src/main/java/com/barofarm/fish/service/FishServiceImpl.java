@@ -69,7 +69,4 @@ public class FishServiceImpl implements IF_FishService{
 	}
 
 
-
-
-
 }

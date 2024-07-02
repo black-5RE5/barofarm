@@ -85,7 +85,7 @@ public class FishController {
 	//-담당자 meat-
 	@GetMapping("/memberUpdate")
 	public String memberUpdate() {
-
+		
 		return "mypage";
 	}
 
@@ -125,7 +125,7 @@ public class FishController {
 
 	//상세보기
 	@GetMapping("detail")
-	public String detail(@RequestParam("product_name") String name, Model model) throws Exception {
+	public String detail(@RequestParam("product_no") String name, Model model) throws Exception {
 		FishVo detailVo=fService.detail(name);
 		model.addAttribute("detailVo", detailVo);
 		System.out.println("상세보기"+detailVo.toString());

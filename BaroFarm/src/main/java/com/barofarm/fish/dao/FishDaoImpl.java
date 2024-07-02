@@ -66,6 +66,4 @@ public class FishDaoImpl implements IF_FishDao{
 		return sqlsession.selectOne(mapperQuery+".getTotalCount");
 	}
 
-	
-
 }
