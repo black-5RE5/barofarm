@@ -77,9 +77,6 @@
 		<div class="page">
 			<tr>
 				<td colspan=4 align=center>
-					<div th:if="${pagevo.prev}">
-						<a class="page" href="@{'/allview?page=' + (${pagevo.startPage -1})}">[이전페이지그룹]</a>
-					</div> 
 					<div th:each="idx : ${#numbers.sequence(pagevo.startPage, pagevo.endPage)}">
 						<a class="page" th:href="@{'/allview?page=' + ${idx}}"> 
 							<span th:if="${idx == pagevo.page }">[</span>
@@ -87,9 +84,6 @@
 							<span th:if="${idx == pagevo.page}">]</span>
 						</a>
 					</div> 
-					<div th:if="${pagevo.next}">
-						<a class="page" th:href="@{'/allview?page=/ + (${pagevo.endPage +1})}">[다음페이지그룹]</a>
-					</div>
 				</td>
 			</tr>
 		</div>
