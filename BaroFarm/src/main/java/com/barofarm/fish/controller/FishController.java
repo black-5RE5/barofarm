@@ -119,7 +119,6 @@ public class FishController {
 	public String view(@RequestParam("product_cate") String category , Model model) throws Exception {
 		List<FishVo> Vo=fService.view(category);
 		model.addAttribute("Vo",Vo);
-		System.out.println(Vo);
 		return "View";
 	}
 
@@ -128,7 +127,6 @@ public class FishController {
 	public String detail(@RequestParam("product_no") String name, Model model) throws Exception {
 		FishVo detailVo=fService.detail(name);
 		model.addAttribute("detailVo", detailVo);
-		System.out.println("상세보기"+detailVo.toString());
 		return "FruitDetail";
 	}
 	
@@ -137,7 +135,6 @@ public class FishController {
 		public String middleview(@RequestParam("product_middle") String middlecategory , Model model) throws Exception {
 			List<FishVo> Vo=fService.middleview(middlecategory);
 			model.addAttribute("Vo", Vo);
-			System.out.println(Vo.toString());
 			return "View";
 		}
 
