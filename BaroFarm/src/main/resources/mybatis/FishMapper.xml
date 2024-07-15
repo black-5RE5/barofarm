@@ -17,10 +17,11 @@
 	</insert>
 
 	<select id="select" resultType="com.barofarm.fish.vo.FishVo">
-		select * from product order by
+	<!-- select * from product order by
 		product_no asc
 		offset #{startNo} rows fetch next #{perPageNum} rows
-		only
+		only -->	
+		SELECT * FROM product ORDER BY product_no ASC LIMIT #{perPageNum} OFFSET #{startNo}
 	</select>
 
 	<delete id="delete" parameterType="int">
@@ -55,5 +56,12 @@
 	<select id="middleview" resultType="com.barofarm.fish.vo.FishVo">
 		select * from product where product_middle=#{product_middle}
 	</select>
+	
+	<delete id="chkDelete" parameterType="com.barofarm.fish.vo.FishVo">
+    	delete from product where product_no IN 
+  		  <foreach item="productNo" index="index" collection="list" open="(" separator="," close=")">
+       		 #{productNo}
+   		 </foreach>
+	</delete>
 
 </mapper>

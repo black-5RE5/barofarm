@@ -67,6 +67,11 @@ public class FishServiceImpl implements IF_FishService{
 		// TODO Auto-generated method stub
 		return fDao.getTotalCount();
 	}
+	
+	@Override//체크박스 선택 삭제
+	public void chkDelete(List<Integer> chkDelete) {
+		fDao.chkDelete(chkDelete);
 
+	}
 
 }

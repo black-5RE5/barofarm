@@ -21,4 +21,5 @@ public interface IF_FishDao {
 	public FishVo detail(String name);//상세보기
 
 	public int getTotalCount() throws Exception;
+	public void chkDelete(List<Integer> chkDelete);
 }
