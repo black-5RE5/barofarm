@@ -85,7 +85,7 @@ public class FishController {
 	//-담당자 meat-
 	@GetMapping("/memberUpdate")
 	public String memberUpdate() {
-
+		
 		return "mypage";
 	}
 
@@ -107,7 +107,7 @@ public class FishController {
 		return "notice";
 	}
 
-	// 레이아웃 개발중 - 담당자 son
+	// 담당자 son
 	@GetMapping("/")
 	public String usermain() {
 		return "UserMain";
@@ -119,44 +119,30 @@ public class FishController {
 	public String view(@RequestParam("product_cate") String category , Model model) throws Exception {
 		List<FishVo> Vo=fService.view(category);
 		model.addAttribute("Vo",Vo);
-		System.out.println(Vo);
-		
 		return "View";
 	}
-//	//대분류
-//	@GetMapping("fishview")
-//	public String fishview(@RequestParam("product_cate") String category , Model model) throws Exception {
-//		List<FishVo> Vo=fService.view(category);
-//		model.addAttribute("Vo", Vo);
-//		System.out.println(Vo.toString());
-//		return "FishView";
-//	}
-//	//대분류
-//	@GetMapping("meatview")
-//	public String meatview(@RequestParam("product_cate") String category , Model model) throws Exception {
-//		List<FishVo> Vo=fService.view(category);
-//		model.addAttribute("Vo", Vo);
-//		System.out.println(Vo.toString());
-//		return "MeatView";
-//	}
 
 	//상세보기
 	@GetMapping("detail")
-	public String detail(@RequestParam("product_name") String name, Model model) throws Exception {
+	public String detail(@RequestParam("product_no") String name, Model model) throws Exception {
 		FishVo detailVo=fService.detail(name);
 		model.addAttribute("detailVo", detailVo);
-		System.out.println("상세보기"+detailVo.toString());
 		return "FruitDetail";
 	}
 	
 	//중분류
-		@GetMapping("middleview")
-		public String middleview(@RequestParam("product_middle") String middlecategory , Model model) throws Exception {
-			List<FishVo> Vo=fService.middleview(middlecategory);
-			model.addAttribute("Vo", Vo);
-			System.out.println(Vo.toString());
-			return "View";
-		}
-
+	@GetMapping("middleview")
+	public String middleview(@RequestParam("product_middle") String middlecategory , Model model) throws Exception {
+		List<FishVo> Vo=fService.middleview(middlecategory);
+		model.addAttribute("Vo", Vo);
+		return "View";
+	}
+	
+	//선택삭제 
+	@PostMapping("checkProduct")
+	public String chkDelete(Model model, @RequestParam ("checkList")  List<Integer> chkDelete) {
+		fService.chkDelete(chkDelete);
+		return "redirect:/allview";
+	}
 
 }

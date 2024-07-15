@@ -55,7 +55,6 @@ public class FishDaoImpl implements IF_FishDao{
 	public List<FishVo> view(String category) {
 		return sqlsession.selectList(mapperQuery+".view", category);
 	}
-
 	@Override//중분류
 	public List<FishVo> middleview(String middlecategory) {
 		return sqlsession.selectList(mapperQuery+".middleview", middlecategory);
@@ -66,7 +65,9 @@ public class FishDaoImpl implements IF_FishDao{
 		// TODO Auto-generated method stub
 		return sqlsession.selectOne(mapperQuery+".getTotalCount");
 	}
+	@Override //체크박스 선택 삭제
+	public void chkDelete(List<Integer> chkDelete) {
+		sqlsession.delete(mapperQuery+".chkDelete",chkDelete);
 
-	
-
+	}
 }

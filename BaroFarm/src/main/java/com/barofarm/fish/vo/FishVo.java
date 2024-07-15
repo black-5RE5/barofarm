@@ -15,6 +15,5 @@ public class FishVo {
 	private int product_price=0;
 	private String product_origin=null;
 	private int product_stock=0;
-
 	
 }
