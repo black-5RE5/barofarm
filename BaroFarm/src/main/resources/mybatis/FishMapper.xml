@@ -56,5 +56,12 @@
 	<select id="middleview" resultType="com.barofarm.fish.vo.FishVo">
 		select * from product where product_middle=#{product_middle}
 	</select>
+	
+	<delete id="chkDelete" parameterType="com.barofarm.fish.vo.FishVo">
+    	delete from product where product_no IN 
+  		  <foreach item="productNo" index="index" collection="list" open="(" separator="," close=")">
+       		 #{productNo}
+   		 </foreach>
+	</delete>
 
 </mapper>

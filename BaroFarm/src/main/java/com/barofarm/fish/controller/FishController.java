@@ -131,12 +131,18 @@ public class FishController {
 	}
 	
 	//중분류
-		@GetMapping("middleview")
-		public String middleview(@RequestParam("product_middle") String middlecategory , Model model) throws Exception {
-			List<FishVo> Vo=fService.middleview(middlecategory);
-			model.addAttribute("Vo", Vo);
-			return "View";
-		}
-
+	@GetMapping("middleview")
+	public String middleview(@RequestParam("product_middle") String middlecategory , Model model) throws Exception {
+		List<FishVo> Vo=fService.middleview(middlecategory);
+		model.addAttribute("Vo", Vo);
+		return "View";
+	}
+	
+	//선택삭제 
+	@PostMapping("checkProduct")
+	public String chkDelete(Model model, @RequestParam ("checkList")  List<Integer> chkDelete) {
+		fService.chkDelete(chkDelete);
+		return "redirect:/allview";
+	}
 
 }
