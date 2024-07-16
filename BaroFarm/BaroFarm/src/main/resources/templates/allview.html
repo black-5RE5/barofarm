@@ -18,8 +18,7 @@
 		<div class="excel">
 			<form action="excelDown">
 				<input type="submit" value="엑셀 다운로드" >
-		</form>
-		
+			</form>		
 		</div>
 		
 		
@@ -27,7 +26,9 @@
 		<hr class="hr_1">
 		<div class="fish_table">
 			<div class="fish_table_row">
-
+				<div class="fish_table_cell2">
+					<input type="checkbox" th:value="${product_no}" name="checkList" onclick="selectAll(this)">
+				</div>
 				<div class="fish_table_cell2">
 					<p>번호</p>
 				</div>

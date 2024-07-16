@@ -41,3 +41,11 @@ $(document).ready(function() {
 function delchk(){
 	return confirm("정말로 삭제하시겠습니까?")
 }
+
+function selectAll(selectAll) {
+	const checkboxes = document.getElementsByName('checkList');
+	Array.from(checkboxes).forEach((checkbox)=>{
+		checkbox.checked = selectAll.checked;		
+	});
+
+}
