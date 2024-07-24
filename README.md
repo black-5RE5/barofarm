@@ -1,7 +1,10 @@
 # BaroFarm
 
+
 # URL
 http://www.barofarm.shop:8080/
+
+
 
 # 📋프로젝트 소개
 
@@ -14,8 +17,12 @@ BaroFarm은 국내 농수산물 직거래 사이트입니다. '생산자-도매�
 
 국내 농수산물 의존도를 높임으로써 식료품에 대한 수입 의존도를 낮추고 국내 농수산업의 생산량 증대를 기대하고자 농수산물 직거래 배송 사이트를 기획하게 되었습니다.
 
+
+
 # ⏰프로젝트 개발 기간
 24.06.03-24.07.18
+
+
 
 # 💁‍♂️개발자 소개
 
@@ -29,13 +36,16 @@ BaroFarm은 국내 농수산물 직거래 사이트입니다. '생산자-도매�
 손정현 : 농산물 CRUD / 다중선택 기능 / 상품 전체&상세보기 기능 / <header> <nav> view
 
 # Front-End
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 
 # Back-End
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)  ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) 
 
-# DBMS
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) 
+# Server
+![Google Cloud Platform](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)  ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
-# 배포
-![Google Cloud Platform](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
+
+# IDE
+![STS 4](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)  
+
+
