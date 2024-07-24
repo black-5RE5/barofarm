@@ -1,9 +1,9 @@
 # BaroFarm 소개
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=black-5RE5&layout=compact)
 
 
 
-# URL
+
+# 🚀URL
 http://www.barofarm.shop:8080/
 
 
@@ -37,7 +37,14 @@ BaroFarm은 국내 농수산물 직거래 사이트입니다. '생산자-도매�
 이찬용 : 축산물 CRUD / 전체선택 기능 / 페이징 기능 / 마이페이지 view
 
 
-손정현 : 농산물 CRUD / 다중선택 기능 / 상품 전체&상세보기 기능 / <header> <nav> view
+손정현 : 농산물 CRUD / 다중선택 기능 / 상품 전체&상세보기 기능 / header&nav view
+
+
+
+
+# 👀개발 언어 사용 비율
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=black-5RE5&layout=compact)
+
 
 
 
