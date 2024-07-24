@@ -35,6 +35,8 @@ BaroFarm은 국내 농수산물 직거래 사이트입니다. '생산자-도매�
 
 손정현 : 농산물 CRUD / 다중선택 기능 / 상품 전체&상세보기 기능 / <header> <nav> view
 
+
+
 # Front-End
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 
