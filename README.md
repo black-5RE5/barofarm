@@ -1,3 +1,8 @@
+#BaroFarm
+
+#URL
+http://www.barofarm.shop:8080/
+
 #📋프로젝트 소개
 BaroFarm은 국내 농수산물 직거래 사이트입니다. '생산자-도매법인-도매시장-소매시장-소비자'의 다단계 유통구조를 거치기 때문에 소비자는 값비싼 식료품을 구매할 수 밖에 없습니다. 
 소비자 입장에서는 식료품 구입에 부담감을 느끼게 되고 수입품에 의존하게 됩니다. 이는 국내 농수산물의 시장의 침체로 이어지는 악순환이 발생합니다.
@@ -12,5 +17,13 @@ BaroFarm은 국내 농수산물 직거래 사이트입니다. '생산자-도매�
 손정현 : 농산물 CRUD / 다중선택 기능 / 상품 전체&상세보기 기능 / <header> <nav> view
 
 #Front-End
-<img src="https://img.shields.io/badge/{HTML}-{red}?style=flat-square&logo={로고이름}&logoColor=white"/>
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
 
+#Back-End
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+#DBMS
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) 
+
+#배포
+![Google Cloud Platform](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
